@@ -11,6 +11,7 @@ export class AddContactComponent{
   inputContact = {} as Contact;
   addContact(){
     this.contactAdded.emit(this.inputContact);
+    this.inputContact = {} as Contact;
   }
 
 }

@@ -11,9 +11,6 @@ const routes: Routes = [];
   imports: [RouterModule.forRoot([
     {
       path: '',
-      children: [
-    {
-      path: '',
       component: ContactsBookComponent
     },
     {
@@ -21,8 +18,6 @@ const routes: Routes = [];
       redirectTo: '',
       component: ContactsBookComponent
     }
-  ]
-  }
   ])],
   exports: [RouterModule]
 })

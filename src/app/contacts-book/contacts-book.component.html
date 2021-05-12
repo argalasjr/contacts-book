@@ -1,6 +1,6 @@
 <h3>Contacts book:</h3>
 <ul *ngFor="let contact of contacts$ | async">
-  <li (click)="displayContact(contact)">{{contact.firstName}} {{contact.lastName}}</li>
+  <li [ngClass]="{highlighted : displayedContact == contact}" (click)="displayContact(contact)">{{contact.firstName}} {{contact.lastName}}</li>
 </ul>
 <h3>Add contact:</h3>
 <app-add-contact (contactAdded)="onAdd($event)"></app-add-contact>

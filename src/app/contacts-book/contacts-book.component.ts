@@ -10,7 +10,7 @@ import { selectContacts } from '../state/contacts-book.selectors';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactsBookComponent implements OnInit {
-
+  selected: boolean;
   displayedContact = {} as Contact;
   contacts$ = this.store.pipe(select(selectContacts));
   constructor(private store: Store, private cd: ChangeDetectorRef) { }
@@ -25,6 +25,7 @@ export class ContactsBookComponent implements OnInit {
   }
 
   displayContact(contact: Contact): void {
+    this.selected = true;
     this.displayedContact = contact;
     this.cd.markForCheck();
   }

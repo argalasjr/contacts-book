@@ -4,5 +4,5 @@
   <input [(ngModel)]="inputContact.phone" placeholder="Phone" name="phone" />
   <input [(ngModel)]="inputContact.email" placeholder="Email" name="email" />
   <input [(ngModel)]="inputContact.address" placeholder="Address" name="address" />
-  <button (click)="addContact()" [disabled]="!inputContact.firstName && !inputContact.lastName">Submit</button>
+  <button (click)="addContact()" [disabled]="!inputContact.firstName || !inputContact.lastName">Submit</button>
 </form>

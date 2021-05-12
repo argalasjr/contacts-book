@@ -1,4 +1,7 @@
-input {
-  margin-top: 20px;
-  display: block;
+.highlighted {
+  color: green;
+}
+
+li:hover {
+  cursor: pointer;
 }
