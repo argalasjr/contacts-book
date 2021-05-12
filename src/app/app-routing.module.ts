@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { ContactsBookComponent } from './contacts-book/contacts-book.component';
-import { DetailContactComponent } from './detail-contact/detail-contact.component';
+import { ContactsBookModule } from './contacts-book/contacts-book.module';
 
 
 const routes: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forRoot([
+  imports: [
+    ContactsBookModule,
+    RouterModule.forRoot([
     {
       path: '',
       component: ContactsBookComponent
