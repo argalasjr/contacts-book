@@ -63,8 +63,6 @@ describe('ContactsBookComponent', () => {
     expect(component).toBeTruthy();
   });
 
-
-
   describe('ContactsReducer', () => {
     describe('Initial state', () => {
       it('should return the default state', () => {
@@ -91,7 +89,7 @@ describe('ContactsBookComponent', () => {
           address: 'hollywood'
         };
         const addAction = addContact({Contact: newContact})
-        const state = fromReducer.contactsReducer(initialState, addContact);
+        const state = fromReducer.contactsReducer(initialState, addAction);
         expect(state.length).toEqual(2);
       });
     });
