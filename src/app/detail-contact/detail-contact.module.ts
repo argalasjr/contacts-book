@@ -7,9 +7,6 @@ import { RouterModule } from '@angular/router';
   declarations: [DetailContactComponent],
   imports: [    
     CommonModule,
-    RouterModule.forChild( [
-      { path: 'detail', component: DetailContactComponent }
-     ])
   ],
   exports: [
     DetailContactComponent

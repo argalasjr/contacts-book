@@ -8,6 +8,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { AddContactModule } from './add-contact/add-contact.module';
 import { DetailContactModule } from './detail-contact/detail-contact.module';
 import { ContactsBookModule } from './contacts-book/contacts-book.module';
+import { contactsReducer } from './state/contacts-book.reducer';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,11 @@ import { ContactsBookModule } from './contacts-book/contacts-book.module';
     DetailContactModule,
     ContactsBookModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     EffectsModule.forRoot([]),
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({ contacts: contactsReducer}),
+    StoreRouterConnectingModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

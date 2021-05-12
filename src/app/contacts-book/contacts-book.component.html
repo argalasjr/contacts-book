@@ -1,1 +1,8 @@
-<p>contacts-book works!</p>
+<h3>Contacts book:</h3>
+<ul *ngFor="let contact of contacts$ | async">
+  <li (click)="displayContact(contact)">{{contact.firstName}} {{contact.lastName}}</li>
+</ul>
+<h3>Add contact:</h3>
+<app-add-contact (contactAdded)="onAdd($event)"></app-add-contact>
+<h3>Detail:</h3>
+<app-detail-contact *ngIf="displayedContact.firstName && displayedContact.lastName" [contact]="displayedContact"></app-detail-contact>

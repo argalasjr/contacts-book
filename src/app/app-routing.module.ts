@@ -17,14 +17,6 @@ const routes: Routes = [];
       component: ContactsBookComponent
     },
     {
-      path: 'detail',
-      loadChildren: () => import('./detail-contact/detail-contact.module').then(m => m.DetailContactModule)
-    },
-    {
-      path: 'add',
-      loadChildren: () => import('./add-contact/add-contact.module').then(m => m.AddContactModule)
-    },
-    {
       path: '**',
       redirectTo: '',
       component: ContactsBookComponent
